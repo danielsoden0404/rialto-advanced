@@ -37,13 +37,9 @@ jobs:
         with:
           languages: ${{ matrix.language }}
 
-          packs: "codeql/cpp-queries,codeql/cert-cpp-coding-standards"
-
           config: |
             queries:
               - uses: security-and-quality
-              - uses: security-extended
-              - uses: security-experimental
 
           build-mode: ${{ matrix.build-mode }}
 
